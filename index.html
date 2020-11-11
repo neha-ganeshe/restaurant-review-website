@@ -145,7 +145,7 @@
     <div class="contact-container container">
       <section class="contact-section">
         <h3>Contact Us</h3>
-        <form class="contact-form">
+        <form action = "contact.php" method = "POST" class="contact-form">
           <div class="row">
              <div class="one-half column">
               <label for="exampleRecipientInput">Full Name</label>
@@ -157,7 +157,7 @@
                 class="u-full-width"
                 type="email"
                 placeholder="yourname@mailbox.com"
-                id="exampleEmailInput"
+                id="exampleEmailInput" name = "email"
               />
             </div>
           </div>
@@ -165,7 +165,7 @@
           <textarea
             class="u-full-width"
             placeholder="Enter your message here..."
-            id="exampleMessage"
+            id="exampleMessage" name = "message"
           ></textarea>
           <input class="button-primary" type="submit" value="Submit" />
         </form>

@@ -59,11 +59,11 @@
                 <?php
                   $servername = "localhost";
 
-                  $username = "id10650411_amoghdb";
+                  $username = "root";
 
-                  $password = "sasHAWbpzJShxU8";
+                  $password = "";
 
-                  $dbname = "id10650411_sunrisedb";
+                  $dbname = "restaurant";
                 
                   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -74,11 +74,8 @@
                     <tr>
                       <td><?php echo $row["id"]; ?></td>
                       <td><?php echo $row["name"]; ?></td>
-                      <td><?php echo $row["address"]; ?></td>
-                      <td><?php echo $row["zipcode"]; ?></td>
-                      <td><?php echo $row["phone"]; ?></td>
-                      <td><?php echo $row["room"]; ?></td>
-                      <td><?php echo $row["status"]; ?></td>
+                      <td><?php echo $row["rating"]; ?></td>
+                      <td><?php echo $row["review"]; ?></td>
                     </tr>
                     <?php } ?>
               </tbody>

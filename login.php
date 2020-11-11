@@ -3,11 +3,11 @@
 
     $servername = "localhost";
 
-    $username = "id10650411_amoghdb";
+    $username = "root";
 
-    $password = "sasHAWbpzJShxU8";
+    $password = "";
 
-    $dbname = "id10650411_sunrisedb";
+    $dbname = "restaurant";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 

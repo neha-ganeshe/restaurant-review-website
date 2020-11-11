@@ -1,11 +1,11 @@
 <?php
     $servername = "localhost";
 
-    $username = "id10650411_amoghdb";
+    $username = "root";
 
-    $password = "sasHAWbpzJShxU8";
+    $password = "";
 
-    $dbname = "id10650411_sunrisedb";
+    $dbname = "restaurant";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -13,10 +13,9 @@
         $entered_username = $_POST['username'];
         $entered_password = $_POST['password'];
         $entered_secretKey = $_POST['secretKey'];
-        $id = rand(100, 999);
 
         if ($entered_secretKey == 'abcd1234') {
-            $sql = "INSERT INTO login(id, user, pass) VALUES ($id, '$entered_username', '$entered_password')";
+            $sql = "INSERT INTO login(user, pass) VALUES ('$entered_username', '$entered_password')";
             if (mysqli_query($conn, $sql)) {
               header("Location: login.html");
             }

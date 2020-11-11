@@ -1,24 +1,24 @@
 <?php
     $servername = "localhost";
 
-    $username = "id10650411_amoghdb";
+    $username = "root";
 
-    $password = "sasHAWbpzJShxU8";
+    $password = "";
 
-    $dbname = "id10650411_sunrisedb";
+    $dbname = "restaurant";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
+     if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 
-    if ( isset($_POST['name']) && isset($_POST['address']) && isset($_POST['zip']) && isset($_POST['number']) && isset($_POST['roomName']) ) {
+} ;
+
+    if ( isset($_POST['name']) && isset($_POST['rate']) && isset($_POST['review'])  ) {
         $entered_name = $_POST['name'];
-        $entered_address = $_POST['address'];
-        $entered_zip = $_POST['zip'];
-        $entered_number = $_POST['number'];
-        $selected_roomName = $_POST['roomName'];
-        $request_status = 'Pending';
-        $id = rand(100, 999);
+        $entered_rate = $_POST['rate'];
+        $entered_review = $_POST['review'];
 
-        $sql = "INSERT INTO request(id, name, address, zipcode, phone, room, status) VALUES ($id, '$entered_name', '$entered_address', '$entered_zip', '$entered_number', '$selected_roomName', '$request_status')";
+        $sql = "INSERT INTO request(name, rating, review) VALUES ('$entered_name', '$entered_rate', '$entered_review')";
 
         if (mysqli_query($conn, $sql)) {
             header("Location: request_success.html");
